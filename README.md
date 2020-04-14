@@ -116,7 +116,7 @@ Include the following dependency in your SBT build
 libraryDependencies += "io.kinoplan" %% "emailaddress-core" % "<current_version>"
 ```
 
-#### Play Json
+#### Play Json 2.8.*
 
 ```scala
 libraryDependencies ++= Seq(
@@ -125,13 +125,37 @@ libraryDependencies ++= Seq(
 )
 ```
 
-#### Circe
+In your code, use following import
+```scala
+import io.kinoplan.scala.utils.emailaddress.EmailAddressFormat._
+```
+
+#### Circe 0.13.*
 
 ```scala
 libraryDependencies ++= Seq(
    "io.kinoplan" %% "emailaddress-core" % "<current_version>",
    "io.kinoplan" %% "emailaddress-circe" % "<current_version>"
 )
+```
+
+In your code, use following import
+```scala
+import io.kinoplan.scala.utils.emailaddress.EmailAddressCodec._
+```
+
+#### Reactivemongo 0.18.*
+
+```scala
+libraryDependencies ++= Seq(
+   "io.kinoplan" %% "emailaddress-core" % "<current_version>",
+   "io.kinoplan" %% "emailaddress-reactivemongo" % "<current_version>"
+)
+```
+
+In your code, use following import
+```scala
+import io.kinoplan.scala.utils.emailaddress.EmailAddressHandler._
 ```
 
 ## License ##

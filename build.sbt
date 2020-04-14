@@ -19,6 +19,14 @@ lazy val circe = project.in(file("circe"))
     "io.circe" %% "circe-core" % "0.13.0" % Provided
   ))
 
+lazy val reactivemongo = project.in(file("reactivemongo"))
+  .dependsOn(core)
+  .settings(BuildSettings.common)
+  .settings(name := s"${BuildSettings.projectName}-reactivemongo")
+  .settings(libraryDependencies ++= testDeps ++ Seq(
+    "org.reactivemongo" %% "reactivemongo" % "0.18.1"
+  ))
+
 lazy val testDeps = Seq(
   "org.scalatest" %% "scalatest" % "3.1.1" % Test,
   "org.scalacheck" %% "scalacheck" % "1.14.1" % Test,

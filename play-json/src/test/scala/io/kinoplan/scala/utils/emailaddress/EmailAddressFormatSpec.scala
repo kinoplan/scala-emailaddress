@@ -3,9 +3,9 @@ package io.kinoplan.scala.utils.emailaddress
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers
 import play.api.libs.json.{Json, JsError, JsSuccess, JsString}
-import io.kinoplan.scala.utils.emailaddress.EmailAddressFormats._
+import io.kinoplan.scala.utils.emailaddress.EmailAddressFormat._
 
-class EmailAddressFormatsSpec extends AnyWordSpec with Matchers {
+class EmailAddressFormatSpec extends AnyWordSpec with Matchers {
 
   "Reading an EmailAddress from JSON" should {
 
