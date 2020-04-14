@@ -1,4 +1,4 @@
-package io.kinoplan.scala.utils.emailaddress
+package io.kinoplan.emailaddress
 
 case class EmailAddress(value: String) extends StringValue {
 

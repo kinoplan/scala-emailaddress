@@ -1,4 +1,4 @@
-package io.kinoplan.scala.utils.emailaddress
+package io.kinoplan.emailaddress
 
 object StringValue {
   implicit def stringValueToString(e: StringValue): String = e.value

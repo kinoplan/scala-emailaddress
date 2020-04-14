@@ -1,4 +1,4 @@
-package io.kinoplan.scala.utils.emailaddress
+package io.kinoplan.emailaddress
 
 import reactivemongo.bson.{BSONReader, BSONString, BSONWriter}
 

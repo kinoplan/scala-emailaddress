@@ -1,4 +1,4 @@
-package io.kinoplan.scala.utils.emailaddress
+package io.kinoplan.emailaddress
 
 import org.scalatest.TryValues
 import org.scalatest.matchers.should.Matchers

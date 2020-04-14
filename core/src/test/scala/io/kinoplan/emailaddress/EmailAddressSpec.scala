@@ -1,6 +1,6 @@
-package io.kinoplan.scala.utils.emailaddress
+package io.kinoplan.emailaddress
 
-import io.kinoplan.scala.utils.emailaddress.EmailAddress.{Domain, Mailbox}
+import EmailAddress.{Domain, Mailbox}
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks

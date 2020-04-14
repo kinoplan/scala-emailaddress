@@ -1,4 +1,4 @@
-package io.kinoplan.scala.utils.emailaddress
+package io.kinoplan.emailaddress
 
 import io.circe.{DecodingFailure, Json}
 import io.circe.syntax._

@@ -12,8 +12,8 @@ Scala micro-library for typing, validating and obfuscating email addresses
 The `EmailAddress` class will only accept valid addresses:
 
 ```scala
-scala> import io.kinoplan.scala.utils.emailaddress._
- import io.kinoplan.scala.utils.emailaddress._
+scala> import io.kinoplan.emailaddress._
+ import io.kinoplan.emailaddress._
 
 scala> EmailAddress("example@test.com")
 res0: EmailAddress = example@test.com
@@ -38,10 +38,10 @@ You can access the mailbox and domain of a given address:
 
 ```scala
 scala> EmailAddress("example@test.com").domain
-res0: io.kinoplan.scala.utils.emailaddress.EmailAddress.Domain = test.com
+res0: io.kinoplan.emailaddress.EmailAddress.Domain = test.com
 
 scala> EmailAddress("example@test.com").mailbox
-res1: io.kinoplan.scala.utils.emailaddress.EmailAddress.Mailbox = example
+res1: io.kinoplan.emailaddress.EmailAddress.Mailbox = example
 ```
 
 These compare equal as you might expect:
@@ -59,13 +59,13 @@ Addresses are obfuscated by starring out all of their mailbox part, apart from t
 
 ```scala
 scala> ObfuscatedEmailAddress("example@test.com")
-res4: io.kinoplan.scala.utils.emailaddress.ObfuscatedEmailAddress = e*****e@test.com
+res4: io.kinoplan.emailaddress.ObfuscatedEmailAddress = e*****e@test.com
 ```
 Unless there are only two letters:
 
 ```scala
 scala> ObfuscatedEmailAddress("ex@test.com")
-res7: io.kinoplan.scala.utils.emailaddress.ObfuscatedEmailAddress = **@test.com```
+res7: io.kinoplan.emailaddress.ObfuscatedEmailAddress = **@test.com```
 
 ```
 
@@ -73,7 +73,7 @@ You can also create them directly from an `EmailAddress`:
 
 ```scala
 scala> EmailAddress("example@test.com").obfuscated
-res6: io.kinoplan.scala.utils.emailaddress.ObfuscatedEmailAddress = e*****e@test.com
+res6: io.kinoplan.emailaddress.ObfuscatedEmailAddress = e*****e@test.com
 ```
 
 
@@ -127,7 +127,7 @@ libraryDependencies ++= Seq(
 
 In your code, use following import
 ```scala
-import io.kinoplan.scala.utils.emailaddress.EmailAddressFormat._
+import io.kinoplan.emailaddress.EmailAddressFormat._
 ```
 
 #### Circe 0.13.*
@@ -141,7 +141,7 @@ libraryDependencies ++= Seq(
 
 In your code, use following import
 ```scala
-import io.kinoplan.scala.utils.emailaddress.EmailAddressCodec._
+import io.kinoplan.emailaddress.EmailAddressCodec._
 ```
 
 #### Reactivemongo 0.18.*
@@ -155,7 +155,7 @@ libraryDependencies ++= Seq(
 
 In your code, use following import
 ```scala
-import io.kinoplan.scala.utils.emailaddress.EmailAddressHandler._
+import io.kinoplan.emailaddress.EmailAddressHandler._
 ```
 
 ## License ##
