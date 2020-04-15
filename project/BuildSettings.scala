@@ -19,7 +19,7 @@ object BuildSettings {
     publishArtifact in Test := false,
     pomIncludeRepository := { _ => false },
 
-    homepage := Some(url("https://github.com/tochkak")),
+    homepage := Some(url("https://github.com/kinoplan")),
     licenses := Seq("Apache 2" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     publishTo in ThisBuild := sonatypePublishToBundle.value,
 

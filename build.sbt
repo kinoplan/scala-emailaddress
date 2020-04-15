@@ -1,3 +1,33 @@
+ThisBuild / organization := "io.kinoplan"
+
+inThisBuild(
+  List(
+    homepage := Some(url("https://github.com/kinoplan")),
+    licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT")),
+    developers := List(
+      Developer(
+        "kinoplan",
+        "Kinoplan",
+        "job@kinoplan.ru",
+        url("https://kinoplan.tech")
+      )
+    ),
+    scmInfo := Some(
+      ScmInfo(
+        url("https://github.com/kinoplan"),
+        "scm:git:git@github.com:kinoplan.git"
+      )
+    )
+  )
+)
+
+lazy val root = project.in(file(".")).settings(BuildSettings.common).aggregate(
+  core, `play-json`, circe, reactivemongo
+).settings(
+  name            := BuildSettings.projectName,
+  skip in publish := true
+)
+
 lazy val core = project.in(file("core"))
   .settings(BuildSettings.common)
   .settings(name := s"${BuildSettings.projectName}-core")
